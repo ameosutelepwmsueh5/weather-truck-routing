@@ -167,4 +167,3 @@ docs/WALKTHROUGH.md           script for the video walkthrough
 - **Free public services** (OpenRouteService, OSRM, Photon, Nominatim, Open-Meteo, OpenStreetMap tiles) have usage limits. They're fine for a demo and review traffic, but production needs paid plans. To protect them, the API rate-limits each IP and caches aggressively.
 - **Open-Meteo free tier:** it counts every location as one call (600/min, 5,000/h, 10,000/day per IP), so very long trips at 10-mile spacing can hit the per-minute limit. The backend then retries, falls back to cached forecasts up to 3 h old (with a notice), or returns a clear 503. Set `OPEN_METEO_API_KEY` to avoid this.
 - **ETAs** are proportional estimates and ignore traffic, breaks and hours-of-service rules.
-# weather-truck-routing
